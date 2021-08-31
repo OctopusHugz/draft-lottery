@@ -57,6 +57,7 @@ def draft_lottery():
                 if random_number in ball_numbers and name not in draft_order:
                     picks_list.append(random_number)
                     draft_order.append(name)
+                    print(f"Ball #{random_number} belongs to {name}")
     print(f"Drawn numbers are: {picks_list}\n")
     print("Draft order is:")
     for index, name in enumerate(draft_order):
