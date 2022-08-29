@@ -14,6 +14,7 @@ def assign_player_names() -> Dict:
     team_4: str = input("Enter 9th place player's name: ")
     team_5: str = input("Enter 8th place player's name: ")
     team_6: str = input("Enter 7th place player's name: ")
+    print()
     return {
         team_1: 30,
         team_2: 24,
@@ -40,6 +41,7 @@ def assign_ball_numbers(player_dict: Dict):
                 assigned_numbers.append(random_number)
                 count += 1
         numbers_dict[name] = numbers_list
+        print(f"{name} has the following balls: {numbers_list}")
     return numbers_dict
 
 
