@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """This module creates a draft lottery program for fantasy football leagues"""
 import random
+from time import sleep
 from typing import Dict, List
 
 
@@ -62,8 +63,9 @@ def draft_lottery():
                     print(f"Ball #{random_number} belongs to {name}")
     print(f"Drawn numbers are: {picks_list}\n")
     print("Draft order is:")
-    for index, name in enumerate(draft_order):
+    for index, name in reversed(list(enumerate(draft_order))):
         print(f"{index + 1}: {name}")
+        sleep(5)
 
 
 draft_lottery()
